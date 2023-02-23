@@ -25,3 +25,11 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+function callDateTime(){
+  var currentDate=(new Date()).toDateString();
+  var currentTime=(new Date()).toLocaleTimeString(); 
+  document.getElementById('time').innerHTML=`${currentDate}-${currentTime}`;
+}
+
+
+setInterval(function(){  callDateTime() }, 1000);
